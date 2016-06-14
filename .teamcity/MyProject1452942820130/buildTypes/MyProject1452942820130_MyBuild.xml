@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="a8644b9f-5908-42e2-971e-5a361f40e804" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>My Build (Windows)</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_675" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo some string &gt;&gt; file.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_696" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[for /l %%%%x in (1, 1, 1000) do (
+   echo %%%%x
+   choice /T 1 /d y > NUL
+)]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements>
+      <contains name="teamcity.agent.jvm.os.name" value="Windows" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
