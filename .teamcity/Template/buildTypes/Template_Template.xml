@@ -4,7 +4,34 @@
   <settings>
     <parameters />
     <build-runners>
-      <runner id="RUNNER_5" name="Step 5" type="Ant">
+      <runner id="RUNNER_1" name="Step 1" type="Ant">
+        <parameters>
+          <param name="build-file"><![CDATA[<project name="test" default="sleep">
+<target name="sleep">
+<sleep seconds="10"/>
+</target>
+</project>]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use-custom-build-file" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_3" name="Step 3" type="Ant">
+        <parameters>
+          <param name="build-file"><![CDATA[<project name="test" default="sleep">
+<target name="sleep">
+<sleep seconds="10"/>
+</target>
+</project>]]></param>
+          <param name="build-file-path" value="build.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use-custom-build-file" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_2" name="Step 2" type="Ant">
         <parameters>
           <param name="build-file"><![CDATA[<project name="test" default="sleep">
 <target name="sleep">
@@ -36,34 +63,7 @@
           <param name="use-custom-build-file" value="true" />
         </parameters>
       </runner>
-      <runner id="RUNNER_1" name="Step 1" type="Ant">
-        <parameters>
-          <param name="build-file"><![CDATA[<project name="test" default="sleep">
-<target name="sleep">
-<sleep seconds="10"/>
-</target>
-</project>]]></param>
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use-custom-build-file" value="true" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_2" name="Step 2" type="Ant">
-        <parameters>
-          <param name="build-file"><![CDATA[<project name="test" default="sleep">
-<target name="sleep">
-<sleep seconds="10"/>
-</target>
-</project>]]></param>
-          <param name="build-file-path" value="build.xml" />
-          <param name="teamcity.coverage.emma.include.source" value="true" />
-          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
-          <param name="teamcity.coverage.idea.includePatterns" value="*" />
-          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use-custom-build-file" value="true" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_3" name="Step 3" type="Ant">
+      <runner id="RUNNER_5" name="Step 5" type="Ant">
         <parameters>
           <param name="build-file"><![CDATA[<project name="test" default="sleep">
 <target name="sleep">

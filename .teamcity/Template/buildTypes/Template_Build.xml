@@ -4,7 +4,7 @@
   <description />
   <settings ref="Template_Template">
     <parameters />
-    <build-runners order="RUNNER_5, RUNNER_4, RUNNER_1, RUNNER_2, RUNNER_3" />
+    <build-runners order="RUNNER_1, RUNNER_3, RUNNER_2, RUNNER_4, RUNNER_5" />
     <vcs-settings />
     <requirements />
     <build-triggers />
