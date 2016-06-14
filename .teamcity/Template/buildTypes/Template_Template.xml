@@ -15,7 +15,7 @@
           <param name="use-custom-build-file" value="true" />
         </parameters>
       </runner>
-      <runner id="RUNNER_3" name="Step 3" type="Ant">
+      <runner id="RUNNER_2" name="Step 2" type="Ant">
         <parameters>
           <param name="build-file"><![CDATA[<project name="test" default="sleep">
 <target name="sleep">
@@ -31,7 +31,7 @@
           <param name="use-custom-build-file" value="true" />
         </parameters>
       </runner>
-      <runner id="RUNNER_2" name="Step 2" type="Ant">
+      <runner id="RUNNER_3" name="Step 3" type="Ant">
         <parameters>
           <param name="build-file"><![CDATA[<project name="test" default="sleep">
 <target name="sleep">
