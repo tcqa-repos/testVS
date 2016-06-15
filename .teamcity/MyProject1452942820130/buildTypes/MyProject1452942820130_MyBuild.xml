@@ -17,7 +17,8 @@
           <param name="script.content"><![CDATA[for /l %%%%x in (1, 1, 300) do (
    echo %%%%x
    choice /T 1 /d y > NUL
-)]]></param>
+)
+exit 0]]></param>
           <param name="teamcity.step.mode" value="execute_if_success" />
           <param name="use.custom.script" value="true" />
         </parameters>
