@@ -44,6 +44,16 @@ exit 0]]></param>
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_21" name="New build step" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[for /l %%%%x in (1, 1, 10) do (
+   echo %%%%x
+   choice /T 1 /d y > NUL
+)]]></param>
+          <param name="teamcity.step.mode" value="execute_if_success" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings />
     <requirements>
