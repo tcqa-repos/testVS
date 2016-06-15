@@ -48,6 +48,13 @@ done]]></param>
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_11" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="exit 10" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings />
     <requirements>
