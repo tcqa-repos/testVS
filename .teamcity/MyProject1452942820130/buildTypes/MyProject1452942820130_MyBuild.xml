@@ -40,7 +40,7 @@ exit 0]]></param>
    echo %%%%x
    choice /T 1 /d y > NUL
 )
-exit 0]]></param>
+exit 1]]></param>
           <param name="teamcity.step.mode" value="execute_if_success" />
           <param name="use.custom.script" value="true" />
         </parameters>
