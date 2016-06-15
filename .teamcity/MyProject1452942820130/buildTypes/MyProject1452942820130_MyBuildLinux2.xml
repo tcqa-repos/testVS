@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5ce2bc3f-2bf6-42fd-8af1-8e141a2a36d8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>My Build (Linux) 2</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_13" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo some string &gt;&gt; file.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_14" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[#!/bin/bash
+for VARIABLE in {1..1000}
+do
+echo "hi $VARIABLE "
+sleep 1s
+done]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_15" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[#!/bin/bash
+for VARIABLE in {1..60}
+do
+echo "hi $VARIABLE "
+sleep 1s
+done]]></param>
+          <param name="teamcity.step.mode" value="execute_if_success" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_16" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[#!/bin/bash
+for VARIABLE in {1..10}
+do
+echo "hi $VARIABLE "
+sleep 1s
+done]]></param>
+          <param name="teamcity.step.mode" value="execute_if_success" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_17" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="exit 10" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_18" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[#!/bin/bash
+for VARIABLE in {1..60}
+do
+echo "hi $VARIABLE "
+sleep 1s
+done]]></param>
+          <param name="teamcity.step.mode" value="execute_if_success" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements>
+      <contains name="teamcity.agent.jvm.os.name" value="Linux" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
