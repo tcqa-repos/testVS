@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fa8dc5f8-176d-4415-ae09-c1cb33762e65" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>My Build (Linux) 2</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_7" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo some string &gt;&gt; file.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_8" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[#!/bin/bash
+for VARIABLE in {1..1000}
+do
+echo "hi $VARIABLE "
+sleep 1s
+done]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements>
+      <contains name="teamcity.agent.jvm.os.name" value="Linux" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
