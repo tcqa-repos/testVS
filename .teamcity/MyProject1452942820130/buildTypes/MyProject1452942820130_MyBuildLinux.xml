@@ -55,6 +55,18 @@ done]]></param>
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_12" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[#!/bin/bash
+for VARIABLE in {1..60}
+do
+echo "hi $VARIABLE "
+sleep 1s
+done]]></param>
+          <param name="teamcity.step.mode" value="execute_if_success" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings />
     <requirements>
