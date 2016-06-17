@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="91b4cfb3-0634-4d8b-9d15-d75402350aea" type="tfs" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Shouldy Tests</name>
+  <param name="secure:tfs-password" value="zxx2c43c1910f08715eebd45408349302a574faccd1a036c8671ebcb8f14ae54e3a108f133c515b080e763f0881e0f4585fc15e94318f0d9a67" />
+  <param name="tfs-root" value="$/Shouldly Tests" />
+  <param name="tfs-url" value="https://tcqa.visualstudio.com/defaultcollection" />
+  <param name="tfs-username" value="##LIVE##\teamcity.qa.server@gmail.com" />
+</vcs-root>
+
