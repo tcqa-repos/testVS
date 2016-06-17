@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="389beb07-4f0f-4110-9f28-2c165af6fdbd" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="389beb07-4f0f-4110-9f28-2c165af6fdbd" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
   <name>&lt;Root project&gt;</name>
   <description>Contains all other projects</description>
   <parameters />
-  <project-extensions>
-    <extension id="versionedSettings" type="versionedSettings">
-      <parameters>
-        <param name="buildSettings" value="PREFER_VCS" />
-        <param name="enabled" value="true" />
-        <param name="rootId" value="HttpsGithubComTcqaReposTestVS" />
-        <param name="showChanges" value="false" />
-      </parameters>
-    </extension>
-  </project-extensions>
   <cleanup>
     <options>
       <option name="preventDependenciesArtifactsFromCleanup" value="false" />
